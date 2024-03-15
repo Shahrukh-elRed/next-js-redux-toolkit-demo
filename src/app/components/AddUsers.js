@@ -9,6 +9,7 @@ const AddUsers = () => {
 
     const userDispatch = () => {
         dispatch(addUser(name))
+        setName("")
     }
 
     return (
@@ -17,6 +18,7 @@ const AddUsers = () => {
             <input type="text" 
                 placeholder="Add New User" 
                 className="add-user-input" 
+                value={name}
                 onChange={(e) => setName(e.target.value)}
             />
             <button onClick={userDispatch} className="add-user-btn">Add User</button>  
