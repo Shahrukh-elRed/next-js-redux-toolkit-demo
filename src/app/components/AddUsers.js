@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { addUser } from "../redux/slice"
+import Link from "next/link"
 
 const AddUsers = () => {
     const dispatch = useDispatch()
@@ -22,6 +23,7 @@ const AddUsers = () => {
                 onChange={(e) => setName(e.target.value)}
             />
             <button onClick={userDispatch} className="add-user-btn">Add User</button>  
+            <Link href="/removeuser">Remove User</Link>
         </div>
     )
 }
