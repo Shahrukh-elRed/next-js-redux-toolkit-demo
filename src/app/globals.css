@@ -1,0 +1,27 @@
+.add-user {
+    height: 200px;
+    padding: 10px;
+    border: 1px solid orange;
+    padding-left: 50px;
+}
+
+.display-user {
+    height: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid orange;
+    padding-left: 50px;
+}
+
+.add-user-input {
+    display: block;
+    width: 250px;
+    height: 35px;
+}
+
+.add-user-btn {
+    display: block;
+    width: 258px;
+    height: 35px;
+    margin-top: 20px;
+}
