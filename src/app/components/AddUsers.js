@@ -23,7 +23,12 @@ const AddUsers = () => {
                 onChange={(e) => setName(e.target.value)}
             />
             <button onClick={userDispatch} className="add-user-btn">Add User</button>  
+            <br />
+            <br />
             <Link href="/removeuser">Remove User</Link>
+            <br />
+            <br />
+            <Link href="/todolist">Go to Todo Page</Link>
         </div>
     )
 }
