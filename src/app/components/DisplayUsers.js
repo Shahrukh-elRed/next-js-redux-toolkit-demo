@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { removeUser } from "../redux/slice"
 
 const DisplayUsers = () => {
-    const userData = useSelector((data) => data.users)
+    const userData = useSelector((data) => data.usersData.users)
     const dispatch = useDispatch()
 
     const handleRemove = (userId) => {
