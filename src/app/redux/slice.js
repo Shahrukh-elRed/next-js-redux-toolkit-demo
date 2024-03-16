@@ -1,8 +1,14 @@
-import { createSlice, current, nanoid } from "@reduxjs/toolkit"
+import { createAsyncThunk, createSlice, current, nanoid } from "@reduxjs/toolkit"
 
 const initialState = {
+    userAPIData: [],
     users: JSON.parse(localStorage.getItem("users")) || []
 }
+
+export const fetchApiUsers = createAsyncThunk("fetchApiUsers", async () => {
+    let result = await fetch("http://jsonplaceholder.typicode.com/users")
+    return result.json()
+})
 
 const slice = createSlice({
     name: "addUserSlice",
@@ -26,6 +32,12 @@ const slice = createSlice({
             const userData = JSON.stringify(state.users)
             localStorage.setItem("users", userData)
         }
+    },
+    extraReducers: (builder) => {
+        builder.addCase(fetchApiUsers.fulfilled, (state, action) => {
+            state.isloading = false,
+            state.userAPIData = action.payload
+        })
     }
 })
 

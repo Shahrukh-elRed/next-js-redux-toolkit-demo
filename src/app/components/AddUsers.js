@@ -29,6 +29,9 @@ const AddUsers = () => {
             <br />
             <br />
             <Link href="/todolist">Go to Todo Page</Link>
+            <br />
+            <br />
+            <Link href="/apiusers">Go to API User List Page</Link>
         </div>
     )
 }
