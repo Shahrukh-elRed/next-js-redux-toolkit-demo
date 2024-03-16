@@ -24,7 +24,7 @@ const Todolist = () => {
             <h3>Todo List</h3>
             {
                 todoData.length ? todoData.map((todo) => 
-                    <h4 key={todo.id + Math.random()}>{todo.name}</h4>
+                    <h4 key={todo.id}>{todo.name}</h4>
                 ) :
                 <h4>No todos added yet</h4>
             }

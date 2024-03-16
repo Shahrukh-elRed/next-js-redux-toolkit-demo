@@ -28,7 +28,6 @@ const slice = createSlice({
                 user.id !== action.payload
             )
             state.users = data
-            localStorage.removeItem("users")
             const userData = JSON.stringify(state.users)
             localStorage.setItem("users", userData)
         }
